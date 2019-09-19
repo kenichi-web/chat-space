@@ -1,36 +1,36 @@
 # README
 # chat-space DB設計
-##usersテーブル
+## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null: false|
 |name|string|null: false|
-###association
+### association
 - has_many :tweets
 
 
-##tweetsテーブル
+## tweetsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
 |user_id|integer|null: false, foreign_key: true|
-###association
+### association
 - belongs_to :user
 - has_many :comments
 
 
-##groupテーブル
+## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 
 
-##groups_usersテーブル
+## groups_usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
-###association
+### association
 - belongs_to :group
 - belongs_to :user
  
