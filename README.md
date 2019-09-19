@@ -7,6 +7,7 @@
 |name|string|null: false|
 ### association
 - has_many :tweets
+- belongs_to :group
 
 
 ## tweetsテーブル
@@ -16,14 +17,16 @@
 |user_id|integer|null: false, foreign_key: true|
 ### association
 - belongs_to :user
-- has_many :comments
+- belongs_to :group
 
 
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
-
+### association
+- has_many :tweets
+- has_many :users
 
 ## groups_usersテーブル
 |Column|Type|Options|
