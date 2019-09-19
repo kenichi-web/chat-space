@@ -7,7 +7,8 @@
 |name|string|null: false|
 ### association
 - has_many :tweets
-- belongs_to :group
+- has_many :groups,through :groups_users
+- has_many :groups_users
 
 
 ## tweetsテーブル
@@ -20,13 +21,14 @@
 - belongs_to :group
 
 
-## groupテーブル
+## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 ### association
 - has_many :tweets
-- has_many :users
+- has_many :users,through :groups_users
+- has_many :groups_users
 
 ## groups_usersテーブル
 |Column|Type|Options|
