@@ -1,4 +1,8 @@
-equire 'rails_helper'
+<<<<<<< HEAD
+require 'rails_helper'
+=======
+require 'rails_helper'
+>>>>>>> master
 
 describe MessagesController do
   let(:group) { create(:group) }
@@ -35,4 +39,8 @@ describe MessagesController do
       end
     end
   end
+<<<<<<< HEAD
 end
+=======
+end
+>>>>>>> master
